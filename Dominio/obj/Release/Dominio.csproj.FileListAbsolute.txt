@@ -1,0 +1,6 @@
+C:\Users\USUARIO\OneDrive\Escritorio\Guadi - copia\LibrosAEP\Dominio\bin\Release\Dominio.dll
+C:\Users\USUARIO\OneDrive\Escritorio\Guadi - copia\LibrosAEP\Dominio\bin\Release\Dominio.pdb
+C:\Users\USUARIO\OneDrive\Escritorio\Guadi - copia\LibrosAEP\Dominio\obj\Release\Dominio.csproj.AssemblyReference.cache
+C:\Users\USUARIO\OneDrive\Escritorio\Guadi - copia\LibrosAEP\Dominio\obj\Release\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\OneDrive\Escritorio\Guadi - copia\LibrosAEP\Dominio\obj\Release\Dominio.dll
+C:\Users\USUARIO\OneDrive\Escritorio\Guadi - copia\LibrosAEP\Dominio\obj\Release\Dominio.pdb
