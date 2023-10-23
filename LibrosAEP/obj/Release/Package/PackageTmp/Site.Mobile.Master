@@ -2,22 +2,232 @@
 <%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="es">
 <head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - BIBLIOTECA AEP</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+     <link rel="stylesheet" type="text/css" href="Estilos.css">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <h1>Mobile Master Page</h1>
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-        <friendlyUrls:ViewSwitcher runat="server" />
-    </div>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-success">
+    <!-- Contenido de la barra de navegación -->
+            <div class="container">
+                <li class="nav-item">
+                            <a class="nav-link" href="Info.aspx">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#0d0d0d}</style><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                            <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000">Info</p>
+                        </li>
+
+                <a class="navbar-brand" runat="server" href="Inicio.aspx">LIBROS AEP</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                           
+                        <li class="nav-item">
+                            <a class="nav-link" href="Inicio.aspx">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 576 512">
+                                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                                </svg></a>
+                            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000; text-align: center;">Inicio</p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                         <div>
+
+                         </div>
+                            <updatepanel>
+                                <div class="form-inline">
+
+                                    <asp:DropDownList runat="server" Width="180px" ID="ddlGenero" class="dropdown-item" CssClass="dropdown-item:hover" AutoPostBack="true" OnSelectedIndexChanged="ddlGenero_SelectedIndexChanged" Font-Size="Small" />
+
+                                </div>
+                            </updatepanel>
+                       </a>
+                                </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <div class="form-inline">
+
+                                    <asp:TextBox runat="server" ID="txtFiltro" CssClass="form-control" AutoPostBack="false" />
+                                    <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" CssClass="btn btn-dark" />
+
+                                </div>
+                            </a>
+                        </li>
+                       
+                          <%if (Negocio.Seguridad.esAdmin(Session["usuario"]))
+                              {  %>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="Listar.aspx">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z" />
+                                </svg></a>
+                            <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000">Libros</p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ListarUsuarios.aspx">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 640 512">
+                                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z" />
+                                </svg></a>
+                            <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000">Usuarios</p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Autores.aspx">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#0c0d0d}</style><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+                                </a>
+                            <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000">Autores</p>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Generos.aspx">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z" />
+                                </svg>
+                            </a>
+                            <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000">Generos</p>
+                        </li>
+                       
+                        <%} %>
+                   
+
+                    </ul>
+                   
+                    <%if (!Negocio.Seguridad.sesionActiva(Session["usuario"]))
+                         {  %>
+
+                    <div class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="Login.aspx">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                                        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
+                                    </svg></a>
+                                <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000">Login</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                    <%}
+                         else
+                         { %>
+                  
+                </div>
+                 
+                <div class="d-flex">
+                    
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="MiPerfil.aspx">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z" />
+                                </svg></a>
+                            <p style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: inherit; font-size: xx-small; font-weight: lighter; color: #000000">Mi Perfil</p>
+                        </li>
+                    </ul>
+                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                        <a class="nav-link">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                                <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <type=style>
+                                    svg {
+                                        fill: #050505
+                                    }
+                                </type><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" /></svg></a>
+                        <div class="form-inline">
+                            <asp:Button ID="btnLogout" Text="Cerrar Session" runat="server" OnClick="btnLogout_Click" CssClass="btn btn-dark" Font-Size="XX-Small" />
+                        </div>
+                    </li>
+                </ul>
+                </div>
+                 <%} %>
+                </div>
+           
+        </nav>
+
+        <div class="contenedorprincipal">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+      <css class= "CuerpoRegistro">
+          .img-small {
+    width: 300px;
+    height: 300px; 
+}
+                </css>
+
+                <script type="text/javascript">
+
+                     function Confirmacion() {
+
+                         var seleccion = confirm("acepta el mensaje ?");
+
+                         if (seleccion)
+                             alert("se acepto el mensaje");
+                         else
+                             alert("NO se acepto el mensaje");
+
+                         //usado para que no haga postback el boton de asp.net cuando 
+                         //no se acepte el confirm
+                         return seleccion;
+
+                     }
+
+                </script>
+            </asp:ContentPlaceHolder>
+          
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - LIBROS AEP</p>
+            </footer>
+        </div>
     </form>
+    
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
 </body>
 </html>

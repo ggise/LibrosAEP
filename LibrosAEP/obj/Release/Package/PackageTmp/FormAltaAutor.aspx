@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FormAltaAutor.aspx.cs" Inherits="LibrosAEP.FormAltaAutor" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+   
          <div class= "CuerpoRegistro">
         <div class="FormularioRegistro">
                <div class="row">

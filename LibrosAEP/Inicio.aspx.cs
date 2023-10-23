@@ -11,7 +11,7 @@ namespace LibrosAEP
 {
     public partial class Inicio : System.Web.UI.Page
     {
-        public List <Libro> listaLibro {  get; set; }
+        public List<Libro> listaLibro { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)  // Asegura que la carga de datos solo se haga en la primera carga y no en postbacks.
@@ -20,8 +20,7 @@ namespace LibrosAEP
                 LibroNegocio negocio = new LibroNegocio();
                 try
                 {
-                    bool dispo = false;
-                    listaLibro = negocio.listar(dispo);
+                    listaLibro = negocio.listarInicio();
                     Session.Add("ListaLibro", listaLibro);
                 }
                 catch (Exception ex)

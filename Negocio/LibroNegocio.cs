@@ -66,6 +66,56 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public List<Libro> listarInicio()
+        {
+            List<Libro> lista = new List<Libro>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                   datos.setearConsulta("select L.Id, L.Titulo, Aut.Id, Aut.Nombre as Autor, L.ImgTapa,L.Sinopsis,L.Activo, G.Id, G.Descripcion as Genero, u.Id, u.Nombre as Dueña from LIBROS L, GENEROS G, AUTOR Aut, USUARIO u where  G.Id=L.IdGenero and  Aut.Id=L.IdAutor and u.Id=L.IdUsuarioDuena  and L.Activo=1 order by  L.Titulo asc ");
+
+                
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Libro aux = new Libro();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Titulo = (string)datos.Lector["Titulo"];
+
+                    aux.Autor = new Autor();
+                    if (!(datos.Lector.IsDBNull(datos.lector.GetOrdinal("Autor"))))
+                        aux.Autor.Nombre = (string)datos.Lector["Autor"];
+                    if (!(datos.lector.IsDBNull(datos.lector.GetOrdinal("ImgTapa"))))
+                        aux.ImgTapa = (string)datos.Lector["ImgTapa"];
+
+                    aux.Genero = new Genero();
+                    if (!(datos.Lector.IsDBNull(datos.lector.GetOrdinal("Genero"))))
+                        aux.Genero.Descripcion = (string)datos.Lector["Genero"];
+                    aux.Usuario = new Usuario();
+                    if (!(datos.Lector.IsDBNull(datos.lector.GetOrdinal("Dueña"))))
+                        aux.Usuario.Nombre = (string)datos.Lector["Dueña"];
+                    if (!(datos.lector.IsDBNull(datos.lector.GetOrdinal("Sinopsis"))))
+                        aux.Sinopsis = (string)datos.Lector["Sinopsis"];
+
+
+                    aux.Activo = (bool)datos.Lector["Activo"];
+
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
 
         public List<Libro> listarxGenero(int idgenero)

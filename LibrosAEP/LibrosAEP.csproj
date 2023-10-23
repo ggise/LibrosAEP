@@ -135,6 +135,7 @@
     <Content Include="Info.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="LibrosFiltrados.aspx" />
+    <Content Include="LibrosxUsuario.aspx" />
     <Content Include="LibroxGenero.aspx" />
     <Content Include="Listar.aspx" />
     <Content Include="ListarUsuarios.aspx" />
@@ -309,6 +310,13 @@
     </Compile>
     <Compile Include="LibrosFiltrados.aspx.designer.cs">
       <DependentUpon>LibrosFiltrados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibrosxUsuario.aspx.cs">
+      <DependentUpon>LibrosxUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibrosxUsuario.aspx.designer.cs">
+      <DependentUpon>LibrosxUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="LibroxGenero.aspx.cs">
       <DependentUpon>LibroxGenero.aspx</DependentUpon>

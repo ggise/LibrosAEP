@@ -1,6 +1,7 @@
 ﻿using Dominio;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Negocio
 {
@@ -144,14 +145,17 @@ namespace Negocio
 
 
         //listarUsuario
-        public List<Usuario> listar()
+        public List<Usuario> listar(bool orden=false)
         {
             List<Usuario> lista = new List<Usuario>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO");
+                if (orden)
+                 datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO ORDER BY Nombre ASC");
+                else
+                    datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())

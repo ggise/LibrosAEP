@@ -15,6 +15,7 @@ namespace LibrosAEP
         GeneroNegocio generonegocio = new GeneroNegocio();
         UsuarioNegocio negocioUsuario = new UsuarioNegocio();
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!(Page is Inicio || Page is LibrosFiltrados
@@ -49,8 +50,8 @@ namespace LibrosAEP
                 try
                 {
 
-
-                    List<Genero> listaGenero = generonegocio.listar();
+                    bool orden = true;
+                    List<Genero> listaGenero = generonegocio.listarxorden(orden);
 
                     // Agregar un elemento adicional al inicio de la lista
                     listaGenero.Insert(0, new Genero { Id = -1, Descripcion = "Seleccionar Genero" });
@@ -64,6 +65,23 @@ namespace LibrosAEP
 
                     // Establecer el elemento predeterminado
                     ddlGenero.SelectedIndex = -1;
+                    ///////////////////////////////////////////////////////////////
+
+                    List<Usuario> listaUsuario = negocioUsuario.listar(orden);
+
+                    // Agregar un elemento adicional al inicio de la lista
+                    listaUsuario.Insert(0, new Usuario { ID = -1, Nombre = "Seleccionar Dueña" });
+
+                    Session["listaUsuario"] = listaUsuario;
+                    ddlGenero.DataSource = listaUsuario;
+                    ddlGenero.DataTextField = "Nombre";
+                    ddlGenero.DataValueField = "ID";
+                    ddlGenero.DataBind();
+
+
+                    // Establecer el elemento predeterminado
+                    ddlUsuario.SelectedIndex = -1;
+
 
 
 
@@ -89,16 +107,16 @@ namespace LibrosAEP
             }
 
         }
-        /*
-                protected void ddlUsuario_SelectedIndexChanged(object sender, EventArgs e)
-                {
-                    int id = int.Parse(ddlUsuario.SelectedValue);
-                    if (id > 0)
-                    {
-                        Response.Redirect("LibrosxUsuario.aspx?IdUsuario=" + id, false);
-                    }
-                }
-        */
+
+        protected void ddlUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = int.Parse(ddlUsuario.SelectedValue);
+            if (id > 0)
+            {
+                Response.Redirect("LibrosxUsuario.aspx?IdUsuario=" + id, false);
+            }
+        }
+
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {

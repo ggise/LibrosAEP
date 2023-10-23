@@ -31,10 +31,11 @@ namespace LibrosAEP
 
                 if (!IsPostBack)
                 {
+                    bool orden = true;
 
 
                     //Genero
-                    listaGenero = genero.listar();
+                    listaGenero = genero.listarxorden(orden);
                     listaGenero.Insert(0, new Genero { Id = -1, Descripcion = "Elegir Genero" });
                     ddlGenero.DataSource = listaGenero;
                     ddlGenero.DataTextField = "Descripcion";
@@ -46,8 +47,7 @@ namespace LibrosAEP
 
 
                     //Autor
-
-                    listaAutor = Autor.listar();
+                    listaAutor = Autor.listar(orden);
 
                     listaAutor.Insert(0, new Autor { Id = -1, Nombre = "Elegir Autor" });
                     ddlAutor.DataSource = listaAutor;

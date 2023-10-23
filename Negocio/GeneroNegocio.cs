@@ -45,6 +45,44 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        public List<Genero> listarxorden(bool orden = false)
+        {
+            List<Genero> lista = new List<Genero>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                if (orden)
+                {
+                    datos.setearConsulta("Select Id,Descripcion,activo from GENEROS ORDER BY Descripcion ASC");
+
+                }
+                else
+                {
+                    datos.setearConsulta("Select Id,Descripcion,activo from GENEROS");
+                }
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Genero aux = new Genero();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Activo = (bool)datos.Lector["Activo"];
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
         public Genero ObtenerPorId(int Id)
         {
             AccesoDatos datos = new AccesoDatos();

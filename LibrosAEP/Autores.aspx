@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Autores.aspx.cs" Inherits="LibrosAEP.Autores" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="Autores.aspx.cs" Inherits="LibrosAEP.Autores" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      
+    
   <div class="ContenedorPrincipal">
 <div class="container-listas">
 <div class="d-flex justify-content-end"style="margin-bottom: 20px">
