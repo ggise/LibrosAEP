@@ -24,6 +24,15 @@ namespace LibrosAEP
         protected global::System.Web.UI.WebControls.DropDownList ddlGenero;
 
         /// <summary>
+        /// Control ddlUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlUsuario;
+
+        /// <summary>
         /// Control txtFiltro.
         /// </summary>
         /// <remarks>

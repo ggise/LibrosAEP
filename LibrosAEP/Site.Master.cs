@@ -21,7 +21,7 @@ namespace LibrosAEP
             if (!(Page is Inicio || Page is LibrosFiltrados
                  || Page is Detalle || Page is _Default
                  || Page is MiPerfil || Page is Contact
-                 || Page is Login || Page is error
+                 || Page is Login || Page is error||Page is LibrosxUsuario
                  || Page is RegistrarCuenta || Page is Info || Page is OlvideContrasena
                  || Page is LibroxGenero || Page is DatosUsuario
                  || Page is MiLectura
@@ -73,10 +73,10 @@ namespace LibrosAEP
                     listaUsuario.Insert(0, new Usuario { ID = -1, Nombre = "Seleccionar Dueña" });
 
                     Session["listaUsuario"] = listaUsuario;
-                    ddlGenero.DataSource = listaUsuario;
-                    ddlGenero.DataTextField = "Nombre";
-                    ddlGenero.DataValueField = "ID";
-                    ddlGenero.DataBind();
+                    ddlUsuario.DataSource = listaUsuario;
+                    ddlUsuario.DataTextField = "Nombre";
+                    ddlUsuario.DataValueField = "ID";
+                    ddlUsuario.DataBind();
 
 
                     // Establecer el elemento predeterminado

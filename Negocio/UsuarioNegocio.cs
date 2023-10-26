@@ -153,7 +153,7 @@ namespace Negocio
             try
             {
                 if (orden)
-                 datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO ORDER BY Nombre ASC");
+                 datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO where Activo=1 ORDER BY Nombre ASC");
                 else
                     datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO");
                 datos.ejecutarLectura();

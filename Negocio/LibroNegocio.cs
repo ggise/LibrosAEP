@@ -227,7 +227,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select l.Id, l.Titulo, Aut.Id, Aut.Nombre as Autor, l.ImgTapa, l.Sinopsis,l.Activo, G.Id, G.Descripcion as Genero, u.Id, u.Nombre as Dueña from LIBROS l, GENEROS G, Autor Aut, USUARIO u where  G.Id=A.IdGenero and  Aut.Id=l.IdAutor and u.Id=l.IdUsuarioDuena and l.Activo=1 and l.IdUsuarioDuena=" + idusuario);
+                datos.setearConsulta("select l.Id, l.Titulo, Aut.Nombre as Autor, l.ImgTapa, l.Sinopsis,l.Activo, G.Descripcion as Genero, u.Nombre as Dueña from LIBROS l, GENEROS G, Autor Aut, USUARIO u where  G.Id=l.IdGenero and  Aut.Id=l.IdAutor and u.Id=l.IdUsuarioDuena and l.Activo=1 and l.IdUsuarioDuena=" + idusuario);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
