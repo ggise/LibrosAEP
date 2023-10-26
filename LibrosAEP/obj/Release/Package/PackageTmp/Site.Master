@@ -75,6 +75,10 @@
 
                                     <asp:DropDownList runat="server" Width="180px" ID="ddlGenero" class="dropdown-item" CssClass="dropdown-item:hover" AutoPostBack="true" OnSelectedIndexChanged="ddlGenero_SelectedIndexChanged" Font-Size="Small" />
 
+                               
+
+                                    <asp:DropDownList runat="server" Width="180px" ID="ddlUsuario" class="dropdown-item" CssClass="dropdown-item:hover" AutoPostBack="true" OnSelectedIndexChanged="ddlUsuario_SelectedIndexChanged" Font-Size="Small" />
+
                                 </div>
                             </updatepanel>
                        </a>

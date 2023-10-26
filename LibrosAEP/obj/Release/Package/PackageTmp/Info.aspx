@@ -6,12 +6,12 @@
                 <h4 style="color: #ffffff">Bienvenidos a Libros AEP</h4>
                 </div>
                 <div class="form-label";style="color: #ffffff">
-                    Esta página esta armada para poder intercambiar libros.
+                     Esta página está diseñada para facilitar el intercamibo de libros.
                     </div>
             <div>
-                    Tenes que crear tu usuario y podes solicitar el libro deseado.
-                    En caso de querer ofrecer algun libro propio podes contactarte con la administradora para agregarlo a la biblioteca.
-                    Ojala esta movida sirva para incentivar a leer mas y poder recomendarnos libros.
+        
+Tienes que crear tu usuario y podes solicitar el libro deseado. En caso de querer ofrecer algún libro propio en tu perfil podes sumar los títulos y la administradora los sumara a la biblioteca. Ojalá esta iniciativa sirva para incentivar a leer más y poder recomendarnos libros.
+Besos!!
                 <div>
 
                 Besos!! 

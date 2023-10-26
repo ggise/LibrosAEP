@@ -36,7 +36,7 @@
                                     <div class="d-flex pt-1">
                                          
                                         <asp:Button text="Modificar perfil" ID="btnDatos"  OnClick="btnDatos_Click" runat="server" CssClass="btn btn-success me-1 flex-grow-1"></asp:Button>
-                                        <asp:Button text="Administrar Libros" id="btnLibros"  OnClick="btnLibros_Click"  runat="server" Class="btn btn-success flex-grow-1"></asp:Button>
+                                        <asp:Button text="Mi Lectura" id="btnLibros"  OnClick="btnLibros_Click"  runat="server" Class="btn btn-success flex-grow-1"></asp:Button>
                                     </div>
                                      <div class="d-flex pt-1">
                                          

@@ -72,7 +72,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                   datos.setearConsulta("select L.Id, L.Titulo, Aut.Id, Aut.Nombre as Autor, L.ImgTapa,L.Sinopsis,L.Activo, G.Id, G.Descripcion as Genero, u.Id, u.Nombre as Dueña from LIBROS L, GENEROS G, AUTOR Aut, USUARIO u where  G.Id=L.IdGenero and  Aut.Id=L.IdAutor and u.Id=L.IdUsuarioDuena  and L.Activo=1 order by  L.Titulo asc ");
+                   datos.setearConsulta("select L.Id, L.Titulo, Aut.Id, Aut.Nombre as Autor, L.ImgTapa,L.Sinopsis,L.Activo, G.Id, G.Descripcion as Genero, u.Id, u.Nombre as Dueña from LIBROS L, GENEROS G, AUTOR Aut, USUARIO u where  G.Id=L.IdGenero and  Aut.Id=L.IdAutor and u.Id=L.IdUsuarioDuena order by  L.Titulo asc ");
 
                 
                 datos.ejecutarLectura();
@@ -124,7 +124,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta(" select l.Id, l.Titulo,Aut.Nombre as Autor, l.ImgTapa,l.Sinopsis,l.Activo, G.Descripcion as Genero, u.Nombre as Dueña from LIBROS l, GENEROS G, AUTOR Aut,USUARIO u where  G.Id=l.IdGenero and  Aut.Id=l.IdAutor and u.Id=l.IdUsuarioDuena and l.Activo=1 and l.IdGenero=" + idgenero);
+                datos.setearConsulta(" select l.Id, l.Titulo,Aut.Nombre as Autor, l.ImgTapa,l.Sinopsis,l.Activo, G.Descripcion as Genero, u.Nombre as Dueña from LIBROS l, GENEROS G, AUTOR Aut,USUARIO u where  G.Id=l.IdGenero and  Aut.Id=l.IdAutor and u.Id=l.IdUsuarioDuena and u.Activo=1 and l.IdGenero=" + idgenero);
 
                 datos.ejecutarLectura();
 
@@ -227,7 +227,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select l.Id, l.Titulo, Aut.Nombre as Autor, l.ImgTapa, l.Sinopsis,l.Activo, G.Descripcion as Genero, u.Nombre as Dueña from LIBROS l, GENEROS G, Autor Aut, USUARIO u where  G.Id=l.IdGenero and  Aut.Id=l.IdAutor and u.Id=l.IdUsuarioDuena and l.Activo=1 and l.IdUsuarioDuena=" + idusuario);
+                datos.setearConsulta("select l.Id, l.Titulo, Aut.Nombre as Autor, l.ImgTapa, l.Sinopsis,l.Activo, G.Descripcion as Genero, u.Nombre as Dueña from LIBROS l, GENEROS G, Autor Aut, USUARIO u where  G.Id=l.IdGenero and  Aut.Id=l.IdAutor and u.Id=l.IdUsuarioDuena and u.Activo=1 and l.IdUsuarioDuena=" + idusuario);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
