@@ -38,7 +38,7 @@ namespace LibrosAEP
                         listaUsuarios = new List<Usuario>();
                         listaUsuarios = negocio.listar();
 
-                        repRepetidor.DataSource = negocio.listar();
+                        repRepetidor.DataSource = listaUsuarios;
                         repRepetidor.DataBind();
 
                     }
@@ -54,10 +54,6 @@ namespace LibrosAEP
 
         }
 
-        protected void BtnAlta_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("RegistrarCuenta.aspx");
-        }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {

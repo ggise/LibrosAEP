@@ -21,7 +21,7 @@ namespace Negocio
                 }
                 else
                 {
-                    datos.setearConsulta("select L.Id, L.Titulo, Aut.Id, Aut.Nombre as Autor, L.ImgTapa,L.Sinopsis, L.Activo, G.Id, G.Descripcion as Genero, u.Id, u.Nombre as Dueña from LIBROS L, GENEROS G, AUTOR Aut, USUARIO u where  G.Id = L.IdGenero and  Aut.Id = L.IdAutor and u.Id=L.IdUsuarioDuena ");
+                    datos.setearConsulta("select L.Id, L.Titulo, Aut.Id, Aut.Nombre as Autor, L.ImgTapa,L.Sinopsis, L.Activo, G.Id, G.Descripcion as Genero, u.Id, u.Nombre as Dueña from LIBROS L, GENEROS G, AUTOR Aut, USUARIO u where  G.Id = L.IdGenero and  Aut.Id = L.IdAutor and u.Id=L.IdUsuarioDuena order by l.titulo");
 
                 }
 

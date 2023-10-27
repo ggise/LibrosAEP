@@ -26,6 +26,7 @@ namespace LibrosAEP
             {
                 try
                 {
+                    
                     Session.Remove("listaFiltrada");
 
                     if (Session["listaFiltrada"] != null)

@@ -16,12 +16,12 @@ namespace Negocio
             {
                 if (Activo)
                 {
-                    datos.setearConsulta("Select Id,Descripcion,activo from GENEROS where activo=1 ");
+                    datos.setearConsulta("Select Id,Descripcion,activo from GENEROS where activo=1 order by Descripcion asc ");
 
                 }
                 else
                 {
-                    datos.setearConsulta("Select Id,Descripcion,activo from GENEROS");
+                    datos.setearConsulta("Select Id,Descripcion,activo from GENEROS order by Descripcion asc");
                 }
                 datos.ejecutarLectura();
 

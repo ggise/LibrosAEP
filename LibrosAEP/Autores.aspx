@@ -5,7 +5,7 @@
   <div class="ContenedorPrincipal">
 <div class="container-listas">
 <div class="d-flex justify-content-end"style="margin-bottom: 20px">
- <asp:Button Text=" Nuevo Artista" CssClass="btn btn-primary" ID="btnAgregarNuevo" OnClick="btnAgregarNuevo_Click" runat="server" />    
+ <asp:Button Text=" Nuevo Autor" CssClass="btn btn-primary" ID="btnAgregarNuevo" OnClick="btnAgregarNuevo_Click" runat="server" />    
       </div>
     <table>
         <thead>

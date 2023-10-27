@@ -43,8 +43,6 @@
                         <asp:DropDownList runat="server" ID="ddlUsuario" CssClass="controls" />
                     </div>
                     <div class="col">
-                        <asp:Button ID="btnAgregarUsuario" runat="server" OnClick="btnAgregarUsuario_Click" Text="+" CssClass="btn btn-primary" />
-                        <asp:Label Text="Agregar una Usuario Nueva" runat="server" ForeColor="White" Font-Size="Small"></asp:Label>
                     </div>
                     <div class="row">
                         <div class="col">

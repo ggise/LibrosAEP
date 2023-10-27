@@ -59,7 +59,7 @@ namespace LibrosAEP
 
 
                     //Usuario
-                    listaUsuario = usuario.listar();
+                    listaUsuario = usuario.listar(orden);
                     listaUsuario.Insert(0, new Usuario { ID = -1, Nombre = "Elegir Dueña" });
                     ddlUsuario.DataSource = listaUsuario;
                     ddlUsuario.DataTextField = "Nombre";
@@ -100,20 +100,6 @@ namespace LibrosAEP
 
                         //////////////////////////////////////////////
 
-                        /*
-                                                List<Usuario> filtrada = new List<Usuario>();
-                                                Usuario duena = new Usuario();
-                                                int IdDuena = seleccionado.Usuario.ID;
-
-                                                ///se busca la Usuario del Libro seleccionado
-                                                duena = usuario.ObtenerPorId(IdDuena);
-
-
-                                                ddlUsuario.SelectedValue = duena.Nombre.ToString();
-                                                ddlUsuario.SelectedValue = seleccionado.Usuario.ID.ToString();
-                                                ddlUsuario.SelectedIndex = duena.ID;
-                        */
-                        /////////////////////////////////////////////////
 
                         List<Usuario> usuFiltrado = new List<Usuario>();
                         Usuario usuSeleccionado = new Usuario();
@@ -169,18 +155,14 @@ namespace LibrosAEP
         protected void btnAgregarAutor_Click(object sender, EventArgs e)
         {
             Session["PaginaAnterior"] = Request.Url.ToString();
-            Response.Redirect("FormAltaAutores.aspx", false);
+            Response.Redirect("FormAltaAutor.aspx", false);
         }
         protected void btnAgregarGenero_Click(object sender, EventArgs e)
         {
             Session["PaginaAnterior"] = Request.Url.ToString();
             Response.Redirect("FormAltaGenero.aspx", false);
         }
-        protected void btnAgregarUsuario_Click(object sender, EventArgs e)
-        {
-            Session["PaginaAnterior"] = Request.Url.ToString();
-            Response.Redirect("FormAltaUsuario.aspx", false);
-        }
+    
 
         protected void BtnAceptar_Click(object sender, EventArgs e)
         {

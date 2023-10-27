@@ -155,7 +155,7 @@ namespace Negocio
                 if (orden)
                  datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO where Activo=1 ORDER BY Nombre ASC");
                 else
-                    datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO");
+                    datos.setearConsulta("select Id,Nombre,Apellido,Email,IdLeyendo,Administrador,Activo from USUARIO ORDER BY Nombre ASC");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())

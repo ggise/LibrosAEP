@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\USUARIO\OneDrive\Escritorio\App Web</_PublishTargetUrl>
-    <History>True|2023-10-26T03:47:29.9022092Z;True|2023-10-23T03:33:49.8437545-03:00;True|2023-10-23T03:12:50.1140840-03:00;True|2023-10-23T00:35:27.0339720-03:00;True|2023-10-22T23:33:43.5066344-03:00;</History>
+    <History>True|2023-10-27T04:09:50.4253949Z;True|2023-10-26T00:47:29.9022092-03:00;True|2023-10-23T03:33:49.8437545-03:00;True|2023-10-23T03:12:50.1140840-03:00;True|2023-10-23T00:35:27.0339720-03:00;True|2023-10-22T23:33:43.5066344-03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -13,7 +13,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/26/2023 00:01:31</publishTime>
     </File>
     <File Include="Autores.aspx">
-      <publishTime>10/26/2023 00:01:31</publishTime>
+      <publishTime>10/27/2023 01:44:02</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>10/26/2023 00:01:31</publishTime>
@@ -40,10 +40,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/26/2023 00:01:31</publishTime>
     </File>
     <File Include="bin/LibrosAEP.dll">
-      <publishTime>10/26/2023 00:47:28</publishTime>
+      <publishTime>10/27/2023 01:58:20</publishTime>
     </File>
     <File Include="bin/LibrosAEP.pdb">
-      <publishTime>10/26/2023 00:47:28</publishTime>
+      <publishTime>10/27/2023 01:58:20</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
       <publishTime>10/26/2023 00:01:31</publishTime>
@@ -64,10 +64,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/26/2023 00:01:32</publishTime>
     </File>
     <File Include="bin/Negocio.dll">
-      <publishTime>10/26/2023 00:47:27</publishTime>
+      <publishTime>10/27/2023 01:58:20</publishTime>
     </File>
     <File Include="bin/Negocio.pdb">
-      <publishTime>10/26/2023 00:47:27</publishTime>
+      <publishTime>10/27/2023 01:58:20</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>10/26/2023 00:01:32</publishTime>
@@ -124,7 +124,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/26/2023 00:01:32</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
-      <publishTime>05/11/2016 18:55:32</publishTime>
+      <publishTime>11/05/2016 18:55:32</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
       <publishTime>10/26/2023 00:01:32</publishTime>
@@ -355,7 +355,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/26/2023 00:01:31</publishTime>
     </File>
     <File Include="FormAltaLibro.aspx">
-      <publishTime>10/26/2023 00:01:31</publishTime>
+      <publishTime>10/27/2023 01:44:02</publishTime>
     </File>
     <File Include="Generos.aspx">
       <publishTime>10/26/2023 00:01:31</publishTime>
@@ -373,22 +373,22 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/26/2023 00:01:31</publishTime>
     </File>
     <File Include="LibrosxUsuario.aspx">
-      <publishTime>10/26/2023 00:43:52</publishTime>
+      <publishTime>10/26/2023 00:58:18</publishTime>
     </File>
     <File Include="LibroxGenero.aspx">
-      <publishTime>10/26/2023 00:01:31</publishTime>
+      <publishTime>10/26/2023 00:58:52</publishTime>
     </File>
     <File Include="Listar.aspx">
       <publishTime>10/26/2023 00:01:31</publishTime>
     </File>
     <File Include="ListarUsuarios.aspx">
-      <publishTime>10/26/2023 00:01:31</publishTime>
+      <publishTime>10/27/2023 01:41:47</publishTime>
     </File>
     <File Include="Login.aspx">
       <publishTime>10/26/2023 00:01:31</publishTime>
     </File>
     <File Include="MiLectura.aspx">
-      <publishTime>10/26/2023 00:01:31</publishTime>
+      <publishTime>10/27/2023 01:09:33</publishTime>
     </File>
     <File Include="MiPerfil.aspx">
       <publishTime>10/26/2023 00:24:27</publishTime>
@@ -523,7 +523,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/26/2023 00:05:51</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
-      <publishTime>10/26/2023 00:01:31</publishTime>
+      <publishTime>10/26/2023 01:10:33</publishTime>
     </File>
     <File Include="SumarLibros.aspx">
       <publishTime>10/26/2023 00:01:31</publishTime>

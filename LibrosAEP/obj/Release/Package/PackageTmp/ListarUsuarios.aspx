@@ -3,7 +3,6 @@
       <div class="ContenedorPrincipal">
 <div class="container-listas">
   <div class="d-flex justify-content-end"style="margin-bottom: 20px">
-               <asp:Button ID="BtnAlta" runat="server" Text="Nuevo Usuario" CssClass="btn btn-primary" type="submit" OnClick="BtnAlta_Click" />   
       </div>
     <table>
         <thead >
